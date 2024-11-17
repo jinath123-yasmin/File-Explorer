@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="App">
       <DndProvider backend={HTML5Backend}>
-        <h1>File Directory</h1>
         <FileExplorer />
       </DndProvider>
     </div>

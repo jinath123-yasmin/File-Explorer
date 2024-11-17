@@ -1,18 +1,227 @@
-/* src/App.css */
 .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f4f8, #d9e8f5);
+  min-height: 100vh;
   font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+  margin-top: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 5px 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.file-item button {
+  margin-left: 10px;
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 3px;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.file-item button:hover {
+  background-color: #cbd5e0;
+}
+
+.folder-item {
+  margin: 5px 0;
+}
+
+.folder-item > div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #e8f0fe;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+}
+
+.folder-item .folder-contents {
+  padding-left: 20px;
+}
+
+.folder-item button {
+  margin-left: 10px;
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 3px;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.folder-item button:hover {
+  background-color: #cbd5e0;
+}
+
+.file-explorer {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.file-explorer-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.file-explorer-header button {
+  background-color: #3182ce;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.file-explorer-header button:hover {
+  background-color: #2b6cb0;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-container input {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.input-container button {
+  background-color: #3182ce;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #2b6cb0;
+}
+
+.empty-message {
+  color: #718096;
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.FileExplorer {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
-.file-directory {
-  padding-left: 10px;
+/* Header Buttons */
+.FileExplorer button {
+  margin: 5px;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-.folder-item,
-.file-item {
-  margin: 5px 0;
-  cursor: pointer;
+.FileExplorer button:hover {
+  background-color: #0056b3;
 }
-.folder-contents {
-  padding-left: 20px;
+
+.FileExplorer .button-cancel {
+  background-color: #6c757d;
+}
+
+.FileExplorer .button-cancel:hover {
+  background-color: #5a6268;
+}
+
+/* Input Field for New Items */
+.FileExplorer .input-container {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.FileExplorer input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 100px);
+}
+
+.FileExplorer .input-container button {
+  padding: 8px 15px;
+}
+
+/* Folder and File List */
+.FileExplorer .directory-list {
+  margin-top: 20px;
+}
+
+.FileExplorer .folder,
+.FileExplorer .file {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #f8f9fa;
+}
+
+.FileExplorer .folder:hover,
+.FileExplorer .file:hover {
+  background-color: #e9ecef;
+}
+
+.FileExplorer .folder {
+  font-weight: bold;
+}
+
+.FileExplorer .file {
+  color: #495057;
+}
+
+/* Loading Spinner */
+.FileExplorer .loading {
+  text-align: center;
+  font-size: 16px;
+  color: #6c757d;
 }
