@@ -5,7 +5,7 @@ const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 console.log("base url",API_BASE_URL);
 
 const api = {
-  getFiles: () => axios.get(`${API_BASE_URL}/api/files`),
+  getFiles: () => axios.get(`${API_BASE_URL}/files`),
   createFile: (data) => axios.post(`${API_BASE_URL}/files/create`, data),
   moveFile: (data) => axios.post(`${API_BASE_URL}/files/move`, data),
   renameFile: (id, newName) =>
